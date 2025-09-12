@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class CreateUserDAO {
     public boolean createUser(String role, String name, String email, String password){
-        String insertQuery = "Inset into users (role, name , email, password ) values (?, ?, ?, ?)";
+        String insertQuery = "Insert into users (role, name , email, password ) values (?, ?, ?, ?)";
         DBUtil myDb = DBUtil.getInstance();
         try{
             Connection con = myDb.getConnection();
@@ -18,12 +18,13 @@ public class CreateUserDAO {
             pstmt.setString(3,email);
             pstmt.setString(4,password);
             pstmt.executeUpdate();
-            System.out.println("User created succesfully");
         }
         catch (SQLException e){
             e.printStackTrace();
+            System.out.println("failed to create user facing error = "+e);
+            return false;
         }
-        System.out.println("User created succesfully");
+        System.out.println("User created Successfully");
         return true;
     }
 }

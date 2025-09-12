@@ -9,7 +9,8 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) throws SQLException {
 
-        WaiterService waiter = new WaiterService();
-        waiter.takeOrder();
+        RestaurantManager restaurantManager = RestaurantManager.getInstance();
+        restaurantManager.runApplication();
+
     }
 }
