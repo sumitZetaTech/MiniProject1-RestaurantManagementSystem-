@@ -33,7 +33,7 @@ public class BookingService {
         if(!Objects.equals(userDecision, "yes"))return;
         System.out.println("Your table has been booked please visit the restaurant within 15 minutes else your booking would be canceled");
 
-        bookingDAO.insertBooking(1,generateFourDigitCode());
+        bookingDAO.insertBooking(userId,generateFourDigitCode());
 
 
     }
