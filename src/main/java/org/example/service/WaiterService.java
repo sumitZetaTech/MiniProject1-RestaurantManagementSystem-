@@ -1,16 +1,19 @@
 package org.example.service;
 
 import org.example.dao.DishDAO;
+import org.example.dao.OrderDAO;
 import org.example.model.Dish;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class WaiterService {
-    List<Integer> order;
-    public List<Integer> takeOrder(){
+
+    public List<OrderDAO> takeOrder(){
         Scanner sc = new Scanner(System.in);
         DishDAO dishDAO = new DishDAO();
+        List<OrderDAO> orderedDish = new ArrayList<>();
         List<Dish>dishes = dishDAO.getAllDishes();
         System.out.println("Good Evening Sir, wanna check out our menu ?");
         System.out.println("Today's Menu");
@@ -22,17 +25,18 @@ public class WaiterService {
             int dishIndex;
             int quantity;
             dishIndex = sc.nextInt();
+            quantity = sc.nextInt();
             if(dishIndex==-1){
                 System.out.println("Thank you for the order our chef will prepare it with 15 mins....");
                 break;
             }
-            quantity = sc.nextInt();
             String dishName = dishes.get(dishIndex-1).getName();
+            OrderDAO orderDAO = new OrderDAO(dishIndex,dishName,quantity);
+            orderedDish.add(orderDAO);
             System.out.println(quantity+" "+dishName+" "+" added in the order do you want to add something else sir ?");
-            System.out.println("Please mention the number of dish and the quantity or -1 if you want to complete this order");
+            System.out.println("Please mention the number of dish and the quantity or -1 -1 if you want to complete this order");
         }
-        System.out.println("May i take  your order request sir?");
-        return order;
+        return orderedDish;
     }
 
 }
