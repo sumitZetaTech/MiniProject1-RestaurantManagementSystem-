@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.service.BookingService;
-import org.example.service.CreateUser;
-import org.example.service.LoginUser;
-import org.example.service.WaiterService;
+import org.example.service.*;
 
 import java.util.Scanner;
 
@@ -24,18 +21,24 @@ public class RestaurantManager {
         System.out.println("Please select the option you want to perform as a user enter the number with respect to the given option");
         System.out.println("1 -> Book ticket");
         System.out.println("2 -> Restaurant check in");
+        System.out.println("3 -> Check your booking status,booking ID and Code");
         int myChoice = input.nextInt();
         switch (myChoice){
             case 1:
                 BookingService.bookTable(userId);
                 break;
             case 2:
-                System.out.println("Restaurant service");
+                String bookingState = ManagerService.validateBooking();
+                if(bookingState.equals("Booked")){
+                    WaiterService.takeOrder();
+                }
                 break;
             case 3:
+                ViewBooking.viewBooking(userId);
+                break;
+            default :
                 System.out.println("You have entered invalid option please try again");
                 break;
-
         }
 
     }

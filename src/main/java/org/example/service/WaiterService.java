@@ -3,6 +3,7 @@ package org.example.service;
 import org.example.dao.DishDAO;
 import org.example.dao.OrderDAO;
 import org.example.model.Dish;
+import org.example.model.Order;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +11,10 @@ import java.util.Scanner;
 
 public class WaiterService {
 
-    public List<OrderDAO> takeOrder(){
+    public static List<Order> takeOrder(){
         Scanner sc = new Scanner(System.in);
         DishDAO dishDAO = new DishDAO();
-        List<OrderDAO> orderedDish = new ArrayList<>();
+        List<Order> orderedDish = new ArrayList<>();
         List<Dish>dishes = dishDAO.getAllDishes();
         System.out.println("Good Evening Sir, wanna check out our menu ?");
         System.out.println("Today's Menu");
@@ -31,11 +32,12 @@ public class WaiterService {
                 break;
             }
             String dishName = dishes.get(dishIndex-1).getName();
-            OrderDAO orderDAO = new OrderDAO(dishIndex,dishName,quantity);
-            orderedDish.add(orderDAO);
+            Order order = new Order(dishIndex,dishName,quantity);
+            orderedDish.add(order);
             System.out.println(quantity+" "+dishName+" "+" added in the order do you want to add something else sir ?");
             System.out.println("Please mention the number of dish and the quantity or -1 -1 if you want to complete this order");
         }
+
         return orderedDish;
     }
 

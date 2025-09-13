@@ -1,36 +1,35 @@
 package org.example.dao;
 
+import org.example.model.Order;
+import org.example.util.DBUtil;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
 public class OrderDAO {
-    public int dishId;
-    public String dishName;
-    public int dishCount;
+    public void insertOrders(List<Order> orders){
+        String sql = "Insert into orders (booking_id, dish_id, quantity) values (?, ?, ?)";
+        DBUtil myDb = DBUtil.getInstance();
+        try {
+            Connection conn = myDb.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            for (Order order : orders) {
+//                pstmt.setInt(1, order.getUserId());
+                pstmt.setInt(2, order.getDishId());
+                pstmt.setInt(3, order.getDishCount()); // Can be current timestamp or passed in
 
-    public OrderDAO(int dishId, String dishName, int dishCount){
-        this.dishId = dishId;
-        this.dishName = dishName;
-        this.dishCount = dishCount;
-    }
-    public int getDishId() {
-        return dishId;
-    }
+                pstmt.addBatch(); // Add to batch
+            }
 
-    public void setDishId(int dishId) {
-        this.dishId = dishId;
-    }
+            pstmt.executeBatch(); // Execute all inserts at once
+            System.out.println("All orders inserted successfully.");
 
-    public String getDishName() {
-        return dishName;
-    }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
 
-    public void setDishName(String dishName) {
-        this.dishName = dishName;
-    }
-
-    public int getDishCount() {
-        return dishCount;
-    }
-
-    public void setDishCount(int dishCount) {
-        this.dishCount = dishCount;
     }
 }
