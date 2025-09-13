@@ -17,28 +17,36 @@ public class RestaurantManager {
     }
     public void handleClientActivity(int userId){
         Scanner input = new Scanner(System.in);
-        System.out.println("Welcome to User page !!!!!");
-        System.out.println("Please select the option you want to perform as a user enter the number with respect to the given option");
-        System.out.println("1 -> Book ticket");
-        System.out.println("2 -> Restaurant check in");
-        System.out.println("3 -> Check your booking status,booking ID and Code");
-        int myChoice = input.nextInt();
-        switch (myChoice){
-            case 1:
-                BookingService.bookTable(userId);
-                break;
-            case 2:
-                String bookingState = ManagerService.validateBooking();
-                if(bookingState.equals("Booked")){
-                    WaiterService.takeOrder();
-                }
-                break;
-            case 3:
-                ViewBooking.viewBooking(userId);
-                break;
-            default :
-                System.out.println("You have entered invalid option please try again");
-                break;
+        boolean exitHandleClientActivity = false;
+        while(!exitHandleClientActivity) {
+            System.out.println("Welcome to User page !!!!!");
+            System.out.println("Please select the option you want to perform as a user enter the number with respect to the given option");
+            System.out.println("1 -> Book ticket");
+            System.out.println("2 -> Restaurant check in");
+            System.out.println("3 -> Check your booking status,booking ID and Code");
+            System.out.println("4 -> Exit the page");
+            int myChoice = input.nextInt();
+            switch (myChoice) {
+                case 1:
+                    BookingService.bookTable(userId);
+                    break;
+                case 2:
+                    String bookingState = ManagerService.validateBooking(userId);
+                    if (bookingState.equals("Booked")) {
+                        WaiterService.takeOrder();
+                    }
+                    break;
+                case 3:
+                    ViewBooking.viewBooking(userId);
+                    break;
+                case 4:
+                    System.out.println("Exiting the page ...");
+                    exitHandleClientActivity = true;
+                    break;
+                default:
+                    System.out.println("You have entered invalid option please try again");
+                    break;
+            }
         }
 
     }
