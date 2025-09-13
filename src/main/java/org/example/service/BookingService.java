@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class BookingService {
     Scanner input = new Scanner(System.in);
-    int generateFourDigitCode(){
+    static int generateFourDigitCode(){
         int randomNumber = 0;
         Random random = new Random();
         for(int curDigit = 1;curDigit<=4;curDigit++){
@@ -17,7 +17,7 @@ public class BookingService {
         }
         return randomNumber;
     }
-    void bookTable(int userId){
+    public static void bookTable(int userId){
         BookingDAO bookingDAO = new BookingDAO();
         Scanner input = new Scanner(System.in);
         System.out.println("Let me check the availability");

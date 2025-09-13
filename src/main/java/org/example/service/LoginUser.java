@@ -6,7 +6,7 @@ import org.example.dao.UserExistDAO;
 import java.util.Scanner;
 
 public class LoginUser {
-    public static void loginUser(String user){
+    public static int loginUser(String user){
         Scanner input = new Scanner(System.in);
         while(true){
             System.out.println("Please enter your email");
@@ -15,13 +15,14 @@ public class LoginUser {
             String password = input.nextLine();
 
             UserExistDAO userExistDAO = new UserExistDAO();
-            if(userExistDAO.checkUserExists(email,password,user)){
-                System.out.println("Login successfully");
-                break;
+            int userId = userExistDAO.checkUserExists(email,password,user);
+            if(userId>0){
+                System.out.println("Login successfull");
             }
             else{
-                System.out.println("Wrong password or email please try again");
+                System.out.println("wrong password or email please try again");
             }
+            return userId;
         }
 
     }

@@ -8,8 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserExistDAO {
-    public boolean checkUserExists(String email, String password, String role) {
-        String sql = "SELECT COUNT(*) FROM users WHERE email = ? AND password = ? AND role = ?";
+    public int checkUserExists(String email, String password, String role) {
+        String sql = "SELECT id FROM users WHERE email = ? AND password = ? AND role = ?";
         DBUtil myDb = DBUtil.getInstance();
         try {
             Connection conn = myDb.getConnection();
@@ -21,12 +21,12 @@ public class UserExistDAO {
 
             ResultSet rs = pstmt.executeQuery();
             if(rs.next()){
-                int count = rs.getInt(1);
-                return count>0;
+                return rs.getInt(1);
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return -1;
     }
 }

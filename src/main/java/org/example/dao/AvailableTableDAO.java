@@ -7,11 +7,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 public class AvailableTableDAO {
-    final int tableInRestaurant = 20;
+    final int tableInRestaurant = 3;
     public int availableTableCount() {
 
         String updateTableQuery = "UPDATE bookings SET booking_status = 'Canceled' WHERE booking_status = 'Booked' AND booking_datetime <= NOW() - INTERVAL '15 minutes'";
