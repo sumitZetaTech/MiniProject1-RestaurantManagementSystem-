@@ -1,7 +1,10 @@
 package org.example;
 
+import org.example.model.Booking;
+import org.example.model.Order;
 import org.example.service.*;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class RestaurantManager {
@@ -15,7 +18,40 @@ public class RestaurantManager {
         }
         return restaurantManager;
     }
-    public void handleClientActivity(int userId){
+    // handleClientActivity...
+    public void customerRestaurantActivity(int userId){
+        Scanner input = new Scanner(System.in);
+        Booking booking = ManagerService.validateBooking(userId);
+        if (!booking.getBookingStatus().equals("Booked")) return ;
+        boolean restaurantExit = false;
+        System.out.println(booking.getId()+ " = bookingId");
+        while(!restaurantExit){
+            System.out.println("Welcome to Romeo Restaurant");
+            System.out.println("Please enter 1, for ordering dish");
+            System.out.println("Please enter 2, for checking out from restaurant");
+            int userRequest = input.nextInt();
+            switch (userRequest){
+                case 1 :
+                    WaiterService.takeOrder(booking.getId());
+                    break;
+                case 2 :
+                    System.out.println("Calling restaurant manager");
+                    ManagerService.calculateBill(booking.getId());
+                    restaurantExit = true;
+                    break;
+                default:
+                    System.out.println("Invalid entry please try again");
+                    break;
+            }
+
+        }
+
+
+        List<Order>myOrders = WaiterService.takeOrder(userId);
+
+        // will write some logic here
+    }
+    public void customerHomePage(int userId){
         Scanner input = new Scanner(System.in);
         boolean exitHandleClientActivity = false;
         while(!exitHandleClientActivity) {
@@ -31,10 +67,7 @@ public class RestaurantManager {
                     BookingService.bookTable(userId);
                     break;
                 case 2:
-                    String bookingState = ManagerService.validateBooking(userId);
-                    if (bookingState.equals("Booked")) {
-                        WaiterService.takeOrder();
-                    }
+                    customerRestaurantActivity(userId);
                     break;
                 case 3:
                     ViewBooking.viewBooking(userId);
@@ -66,7 +99,7 @@ public class RestaurantManager {
                     break;
                 case 2:
                     int userId = LoginUser.loginUser("customer");
-                    handleClientActivity(userId);
+                    customerHomePage(userId);
                     break;
                 case 3:
                     LoginUser.loginUser("admin");

@@ -9,14 +9,14 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class OrderDAO {
-    public void insertOrders(List<Order> orders){
+    public void insertOrders(List<Order> orders,int booking_id){
         String sql = "Insert into orders (booking_id, dish_id, quantity) values (?, ?, ?)";
         DBUtil myDb = DBUtil.getInstance();
         try {
             Connection conn = myDb.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql);
             for (Order order : orders) {
-//                pstmt.setInt(1, order.getUserId());
+                pstmt.setInt(1, booking_id);
                 pstmt.setInt(2, order.getDishId());
                 pstmt.setInt(3, order.getDishCount()); // Can be current timestamp or passed in
 

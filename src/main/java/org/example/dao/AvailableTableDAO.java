@@ -1,6 +1,5 @@
 package org.example.dao;
 
-import org.example.model.Dish;
 import org.example.util.DBUtil;
 
 import java.sql.Connection;

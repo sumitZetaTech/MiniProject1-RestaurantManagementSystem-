@@ -11,9 +11,10 @@ import java.util.Scanner;
 
 public class WaiterService {
 
-    public static List<Order> takeOrder(){
+    public static List<Order> takeOrder(int booking_id){
         Scanner sc = new Scanner(System.in);
         DishDAO dishDAO = new DishDAO();
+        OrderDAO orderDAO = new OrderDAO();
         List<Order> orderedDish = new ArrayList<>();
         List<Dish>dishes = dishDAO.getAllDishes();
         System.out.println("Good Evening Sir, wanna check out our menu ?");
@@ -38,6 +39,7 @@ public class WaiterService {
             System.out.println("Please mention the number of dish and the quantity or -1 -1 if you want to complete this order");
         }
 
+        orderDAO.insertOrders(orderedDish,booking_id);
         return orderedDish;
     }
 

@@ -8,7 +8,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BookingService {
-    Scanner input = new Scanner(System.in);
     static int generateFourDigitCode(){
         int randomNumber = 0;
         Random random = new Random();
