@@ -1,12 +1,15 @@
 package org.example.dao;
 
 import org.example.util.DBUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CreateUserDAO {
+    private static final Logger logger = LoggerFactory.getLogger(CreateUserDAO.class);
     public boolean createUser(String role, String name, String email, String password){
         String insertQuery = "Insert into users (role, name , email, password ) values (?, ?, ?, ?)";
         DBUtil myDb = DBUtil.getInstance();
@@ -21,10 +24,10 @@ public class CreateUserDAO {
         }
         catch (SQLException e){
             e.printStackTrace();
-            System.out.println("failed to create user facing error = "+e);
+            logger.error("Failed to create user: role={}, name={}, email={}", role, name, email, e);
             return false;
         }
-        System.out.println("User created Successfully");
+        logger.info("User created successfully: role={}, name={}, email={}", role, name, email);
         return true;
     }
 }

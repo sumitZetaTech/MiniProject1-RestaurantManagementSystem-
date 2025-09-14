@@ -46,9 +46,6 @@ public class RestaurantManager {
 
         }
 
-
-        List<Order>myOrders = WaiterService.takeOrder(userId);
-
         // will write some logic here
     }
     public void customerHomePage(int userId){
@@ -117,7 +114,7 @@ public class RestaurantManager {
         while(true) {
             System.out.println("which operation you want to perform");
             System.out.println("1 -> Create user");
-            System.out.println("2 -> Login as Client");
+            System.out.println("2 -> Login as Customer");
             System.out.println("3 -> Login as Admin");
             System.out.println("Please Enter your choice");
             int myChoice = input.nextInt();

@@ -1,0 +1,160 @@
+2025-09-14 19:21:55 INFO  [DBUtil] - PostgreSQL connection established.
+2025-09-14 19:21:55 DEBUG [UserExistDAO] - Checking if user exists for email='sumitnegi9667@gmail.com' with role='customer'
+2025-09-14 19:21:55 INFO  [UserExistDAO] - User found: email='sumitnegi9667@gmail.com', role='customer'
+2025-09-14 19:22:17 DEBUG [UserExistDAO] - Checking if user exists for email='sumitnegi9667@gmail.com' with role='customer'
+2025-09-14 19:22:17 INFO  [UserExistDAO] - User found: email='sumitnegi9667@gmail.com', role='customer'
+2025-09-14 19:22:23 DEBUG [LastBookingDAO] - Fetching latest booking for userId=3
+2025-09-14 19:22:23 INFO  [LastBookingDAO] - Latest booking found: bookingId=7, userId=3
+2025-09-14 19:22:27 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:22:27 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:22:27 INFO  [AvailableTableDAO] - Available tables calculated: 0
+2025-09-14 19:22:30 INFO  [BookingDAO] - Booking inserted successfully: userId=3, bookingCode=1564
+2025-09-14 19:22:34 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:22:34 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:22:34 DEBUG [LastBookingDAO] - Fetching latest booking for userId=3
+2025-09-14 19:22:34 INFO  [LastBookingDAO] - Latest booking found: bookingId=8, userId=3
+2025-09-14 19:23:08 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:23:08 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:23:08 INFO  [UpdateBookingStatusDAO] - Booking status updated to 'Active' for bookingId=8
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=1, name=Margherita Pizza, price=89.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=2, name=Paneer Butter Masala, price=105.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=3, name=Chicken Biryani, price=120.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=4, name=Veg Burger, price=67.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=5, name=Grilled Chicken Sandwich, price=72.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=6, name=Pasta Alfredo, price=98.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=7, name=Caesar Salad, price=55.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=8, name=Mutton Rogan Josh, price=139.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=9, name=Tandoori Chicken, price=112.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=10, name=Schezwan Noodles, price=82.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=11, name=Masala Dosa, price=48.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=12, name=Garlic Naan, price=25.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=13, name=Chole Bhature, price=60.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=14, name=Fish Curry, price=126.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=15, name=Chocolate Brownie, price=39.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=16, name=GulabJamun, price=30.0
+2025-09-14 19:23:13 INFO  [DishDAO] - Total dishes fetched: 16
+2025-09-14 19:23:13 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:23:13 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=1, name=Margherita Pizza, price=89.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=2, name=Paneer Butter Masala, price=105.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=3, name=Chicken Biryani, price=120.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=4, name=Veg Burger, price=67.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=5, name=Grilled Chicken Sandwich, price=72.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=6, name=Pasta Alfredo, price=98.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=7, name=Caesar Salad, price=55.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=8, name=Mutton Rogan Josh, price=139.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=9, name=Tandoori Chicken, price=112.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=10, name=Schezwan Noodles, price=82.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=11, name=Masala Dosa, price=48.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=12, name=Garlic Naan, price=25.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=13, name=Chole Bhature, price=60.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=14, name=Fish Curry, price=126.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=15, name=Chocolate Brownie, price=39.0
+2025-09-14 19:23:13 DEBUG [DishDAO] - Fetched dish: id=16, name=GulabJamun, price=30.0
+2025-09-14 19:23:13 INFO  [DishDAO] - Total dishes fetched: 16
+2025-09-14 19:23:19 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:23:19 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:23:19 DEBUG [OrderDAO] - Prepared order: bookingId=8, dishId=5, quantity=5
+2025-09-14 19:23:19 INFO  [OrderDAO] - Inserted 1 orders for bookingId=8
+2025-09-14 19:23:21 DEBUG [BillDAO] - Fetching bill items for booking ID: 8
+2025-09-14 19:23:21 DEBUG [BillDAO] - Fetched dish: Grilled Chicken Sandwich, quantity: 5, price: 72
+2025-09-14 19:23:24 INFO  [UpdateBookingStatusDAO] - Booking status updated to 'Used' for bookingId=8
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=1, name=Margherita Pizza, price=89.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=2, name=Paneer Butter Masala, price=105.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=3, name=Chicken Biryani, price=120.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=4, name=Veg Burger, price=67.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=5, name=Grilled Chicken Sandwich, price=72.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=6, name=Pasta Alfredo, price=98.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=7, name=Caesar Salad, price=55.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=8, name=Mutton Rogan Josh, price=139.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=9, name=Tandoori Chicken, price=112.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=10, name=Schezwan Noodles, price=82.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=11, name=Masala Dosa, price=48.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=12, name=Garlic Naan, price=25.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=13, name=Chole Bhature, price=60.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=14, name=Fish Curry, price=126.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=15, name=Chocolate Brownie, price=39.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=16, name=GulabJamun, price=30.0
+2025-09-14 19:23:24 INFO  [DishDAO] - Total dishes fetched: 16
+2025-09-14 19:23:24 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:23:24 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=1, name=Margherita Pizza, price=89.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=2, name=Paneer Butter Masala, price=105.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=3, name=Chicken Biryani, price=120.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=4, name=Veg Burger, price=67.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=5, name=Grilled Chicken Sandwich, price=72.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=6, name=Pasta Alfredo, price=98.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=7, name=Caesar Salad, price=55.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=8, name=Mutton Rogan Josh, price=139.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=9, name=Tandoori Chicken, price=112.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=10, name=Schezwan Noodles, price=82.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=11, name=Masala Dosa, price=48.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=12, name=Garlic Naan, price=25.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=13, name=Chole Bhature, price=60.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=14, name=Fish Curry, price=126.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=15, name=Chocolate Brownie, price=39.0
+2025-09-14 19:23:24 DEBUG [DishDAO] - Fetched dish: id=16, name=GulabJamun, price=30.0
+2025-09-14 19:23:24 INFO  [DishDAO] - Total dishes fetched: 16
+2025-09-14 19:33:53 INFO  [DBUtil] - PostgreSQL connection established.
+2025-09-14 19:33:53 DEBUG [UserExistDAO] - Checking if user exists for email='sumitnegi9667@gmail.com' with role='customer'
+2025-09-14 19:33:53 INFO  [UserExistDAO] - User found: email='sumitnegi9667@gmail.com', role='customer'
+2025-09-14 19:34:02 DEBUG [LastBookingDAO] - Fetching latest booking for userId=3
+2025-09-14 19:34:02 INFO  [LastBookingDAO] - Latest booking found: bookingId=8, userId=3
+2025-09-14 19:34:17 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:34:17 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:34:17 INFO  [AvailableTableDAO] - Available tables calculated: 0
+2025-09-14 19:34:21 INFO  [BookingDAO] - Booking inserted successfully: userId=3, bookingCode=2006
+2025-09-14 19:34:31 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:34:31 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:34:31 DEBUG [LastBookingDAO] - Fetching latest booking for userId=3
+2025-09-14 19:34:31 INFO  [LastBookingDAO] - Latest booking found: bookingId=9, userId=3
+2025-09-14 19:34:37 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:34:37 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:34:37 DEBUG [LastBookingDAO] - Fetching latest booking for userId=3
+2025-09-14 19:34:37 INFO  [LastBookingDAO] - Latest booking found: bookingId=9, userId=3
+2025-09-14 19:34:41 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:34:41 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:34:41 INFO  [UpdateBookingStatusDAO] - Booking status updated to 'Active' for bookingId=9
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=1, name=Margherita Pizza, price=89.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=2, name=Paneer Butter Masala, price=105.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=3, name=Chicken Biryani, price=120.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=4, name=Veg Burger, price=67.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=5, name=Grilled Chicken Sandwich, price=72.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=6, name=Pasta Alfredo, price=98.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=7, name=Caesar Salad, price=55.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=8, name=Mutton Rogan Josh, price=139.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=9, name=Tandoori Chicken, price=112.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=10, name=Schezwan Noodles, price=82.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=11, name=Masala Dosa, price=48.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=12, name=Garlic Naan, price=25.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=13, name=Chole Bhature, price=60.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=14, name=Fish Curry, price=126.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=15, name=Chocolate Brownie, price=39.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=16, name=GulabJamun, price=30.0
+2025-09-14 19:34:44 INFO  [DishDAO] - Total dishes fetched: 16
+2025-09-14 19:34:44 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:34:44 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=1, name=Margherita Pizza, price=89.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=2, name=Paneer Butter Masala, price=105.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=3, name=Chicken Biryani, price=120.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=4, name=Veg Burger, price=67.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=5, name=Grilled Chicken Sandwich, price=72.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=6, name=Pasta Alfredo, price=98.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=7, name=Caesar Salad, price=55.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=8, name=Mutton Rogan Josh, price=139.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=9, name=Tandoori Chicken, price=112.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=10, name=Schezwan Noodles, price=82.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=11, name=Masala Dosa, price=48.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=12, name=Garlic Naan, price=25.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=13, name=Chole Bhature, price=60.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=14, name=Fish Curry, price=126.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=15, name=Chocolate Brownie, price=39.0
+2025-09-14 19:34:44 DEBUG [DishDAO] - Fetched dish: id=16, name=GulabJamun, price=30.0
+2025-09-14 19:34:44 INFO  [DishDAO] - Total dishes fetched: 16
+2025-09-14 19:34:52 INFO  [DBUtil] - Connection is closed or null, creating new connection.
+2025-09-14 19:34:52 INFO  [DBUtil] - Connection re-established.
+2025-09-14 19:34:52 DEBUG [OrderDAO] - Prepared order: bookingId=9, dishId=5, quantity=5
+2025-09-14 19:34:52 INFO  [OrderDAO] - Inserted 1 orders for bookingId=9
+2025-09-14 19:34:58 DEBUG [BillDAO] - Fetching bill items for booking ID: 9
+2025-09-14 19:34:58 DEBUG [BillDAO] - Fetched dish: Grilled Chicken Sandwich, quantity: 5, price: 72
+2025-09-14 19:35:00 INFO  [UpdateBookingStatusDAO] - Booking status updated to 'Used' for bookingId=9
