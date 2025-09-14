@@ -114,24 +114,25 @@ public class RestaurantManager {
     }
     public void applicationAuth(){
         Scanner input = new Scanner(System.in);
-        System.out.println("which operation you want to perform");
-        System.out.println("1 -> Create user");
-        System.out.println("2 -> Login as Client");
-        System.out.println("3 -> Login as Admin");
-        System.out.println("Please Enter your choice");
         while(true) {
+            System.out.println("which operation you want to perform");
+            System.out.println("1 -> Create user");
+            System.out.println("2 -> Login as Client");
+            System.out.println("3 -> Login as Admin");
+            System.out.println("Please Enter your choice");
             int myChoice = input.nextInt();
+            int userId = 0;
             switch (myChoice) {
                 case 1:
                     CreateUser.createUser();
                     break;
                 case 2:
-                    int userId = LoginUser.loginUser("customer");
-                    customerHomePage(userId);
+                    userId = LoginUser.loginUser("customer");
+                    if(userId>0) customerHomePage(userId);
                     break;
                 case 3:
-                    LoginUser.loginUser("admin");
-                    adminHomePage();
+                    userId = LoginUser.loginUser("admin");
+                    if(userId>0) adminHomePage();
                     break;
                 default:
                     System.out.println("Entered wrong number try again");

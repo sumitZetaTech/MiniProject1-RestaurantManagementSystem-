@@ -18,10 +18,11 @@ public class WaiterService {
         List<Order> orderedDish = new ArrayList<>();
         List<Dish>dishes = dishDAO.getAllDishes();
         System.out.println("Good Evening Sir, wanna check out our menu ?");
-        System.out.println("Today's Menu");
-        for(Dish dish: dishes){
-            System.out.println(dish);
-        }
+        Menu.showMenu();
+//        System.out.println("Today's Menu");
+//        for(Dish dish: dishes){
+//            System.out.println(dish);
+//        }
         System.out.println("Please mention the number of the dish you want to order with the quantity space separated");
         while(true){
             int dishIndex;

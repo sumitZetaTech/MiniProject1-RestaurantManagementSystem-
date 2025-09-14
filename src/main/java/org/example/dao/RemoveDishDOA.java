@@ -12,6 +12,7 @@ public class RemoveDishDOA {
         try{
             Connection conn = DBUtil.getInstance().getConnection();
             PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1,dishId);
             int rowDeleted = pstmt.executeUpdate();
             if(rowDeleted>0){
                 System.out.println("Dish removed succesfully");

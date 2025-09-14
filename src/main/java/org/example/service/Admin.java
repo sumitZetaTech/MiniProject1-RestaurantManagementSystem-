@@ -27,6 +27,7 @@ public class Admin {
     public void deleteDish(){
         Scanner input = new Scanner(System.in);
         System.out.println("Which dish you want to remove, please enter the dish id");
+        Menu.showMenu();
         int dishId = input.nextInt();
         RemoveDishDOA removeDishDOA = new RemoveDishDOA();
         removeDishDOA.removeDish(dishId);
@@ -34,8 +35,10 @@ public class Admin {
 
     public void updatePrice(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Which dish price you want to update, please enter the dish id and the updated price space spearated, ex dishId newPrice");
+        Menu.showMenu();
+        System.out.println("Which dish price you want to update, please enter the dish id ");
         int dishId = input.nextInt();
+        System.out.println("Please enter the new price for the dish");
         int updatedPrice = input.nextInt();
         UpdateDishPriceDOA updateDishPriceDOA = new UpdateDishPriceDOA();
         updateDishPriceDOA.updateDishPrice(dishId,updatedPrice);
