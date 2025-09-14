@@ -57,7 +57,7 @@ public class RestaurantManager {
         while(!exitHandleClientActivity) {
             System.out.println("Welcome to User page !!!!!");
             System.out.println("Please select the option you want to perform as a user enter the number with respect to the given option");
-            System.out.println("1 -> Book ticket");
+            System.out.println("1 -> Book table");
             System.out.println("2 -> Restaurant check in");
             System.out.println("3 -> Check your booking status,booking ID and Code");
             System.out.println("4 -> Exit the page");
@@ -83,13 +83,41 @@ public class RestaurantManager {
         }
 
     }
+    public void adminHomePage(){
+        Scanner input = new Scanner(System.in);
+        boolean existAdminHomePage = false;
+        Admin admin = new Admin();
+        while(!existAdminHomePage) {
+            System.out.println("Please enter the operation you want to perform out of the following....");
+            System.out.println("1 -> Add a new dish in table");
+            System.out.println("2 -> Delete a dish from the table");
+            System.out.println("3 -> Update the price of a dish in the table");
+            System.out.println("4 -> Check today's sale");
+            System.out.println("5 -> Exit home page");
+            int adminRequest = input.nextInt();
+            switch (adminRequest){
+                case 1 : admin.addDish();
+                    break;
+                case 2 : admin.deleteDish();
+                    break;
+                case 3 : admin.updatePrice();
+                    break;
+                case 4 : admin.checkDailySales();
+                    break;
+                case 5 : existAdminHomePage = true;
+                    break;
+                default :
+                    System.out.println("You have entered wrong option please try again");
+            }
+        }
+
+    }
     public void applicationAuth(){
         Scanner input = new Scanner(System.in);
         System.out.println("which operation you want to perform");
         System.out.println("1 -> Create user");
         System.out.println("2 -> Login as Client");
-        System.out.println("3 -> Book as Admin");
-        System.out.println("4 -> Other services");
+        System.out.println("3 -> Login as Admin");
         System.out.println("Please Enter your choice");
         while(true) {
             int myChoice = input.nextInt();
@@ -103,6 +131,7 @@ public class RestaurantManager {
                     break;
                 case 3:
                     LoginUser.loginUser("admin");
+                    adminHomePage();
                     break;
                 default:
                     System.out.println("Entered wrong number try again");

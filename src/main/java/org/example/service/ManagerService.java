@@ -5,14 +5,13 @@ import org.example.dao.LastBookingDAO;
 import org.example.dao.UpdateBookingStatusDAO;
 import org.example.model.BillItem;
 import org.example.model.Booking;
-import org.example.model.Dish;
 
-import java.io.PrintStream;
 import java.util.List;
 import java.util.Scanner;
 
 public class ManagerService {
     public static Booking validateBooking(int userId){
+        UpdateBookingStatusDAO updateBookingStatusDAO = new UpdateBookingStatusDAO();
         Scanner input = new Scanner(System.in);
         LastBookingDAO lastBookingDAO = new LastBookingDAO();
         Booking booking = lastBookingDAO.getLatestBooking(userId);
@@ -27,6 +26,7 @@ public class ManagerService {
         }
 
         if(bookingState.equals("Booked")){
+            updateBookingStatusDAO.updateTable("Active",bookingId);
             System.out.println("Welcome sir, your table is booked, i can see in my database");
         }
         else{
